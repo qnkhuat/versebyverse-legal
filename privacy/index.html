@@ -21,7 +21,7 @@
 <p><strong>Last updated: 29 September 2026</strong></p>
 <p>Verse by Verse ("the app") is provided by HAPIGA VIET NAM COMPANY LIMITED (Hohama Studio, "we", "us"). This policy explains what happens to your information when you use the app.</p>
 <h2>Summary</h2>
-<p>We do not ask for your name, email, contacts, or location. We do not receive your reading history. The app has no account for you to create, no analytics, no advertising, and no tracking. Reading works fully offline. Candle questions use the internet and a random, anonymous app identifier (see below).</p>
+<p>We do not ask for your name, email, contacts, or location. The app does not ask you to sign up. It has no analytics, advertising, or tracking. Reading works fully offline. Candle questions use the internet and a random, anonymous account identifier (see below).</p>
 <h2>Information stored on your device</h2>
 <p>The app keeps a small amount of data on your device so it can work as you expect:</p>
 <ul><li>Your reading position (book, chapter, and verse).</li><li>Your reading preferences (text size and page theme).</li><li>Your daily reminder setting and reminder time.</li><li>Whether you have completed the welcome screens.</li></ul>
@@ -30,13 +30,13 @@
 <p>If you turn on the daily reminder, the app asks iOS for permission to show notifications. The reminder is scheduled on your device. No push token or device identifier is sent to us or to any server. You can turn the reminder off in the app's Settings, or turn off notifications for the app in iOS Settings.</p>
 <h2>Candle questions</h2>
 <p>When Candle mode loads questions about a chapter, the app sends the book and chapter number (for example, "Genesis 1") to our server. The server, hosted on Google Cloud (Firebase), asks an AI service (Replicate) to write the questions, then stores them so every reader of that chapter gets the same questions.</p>
-<p>To keep this service for the app only, the app signs in to Firebase Authentication anonymously the first time it loads questions. Firebase creates a random identifier for your installation of the app. It is not linked to your name, email, Apple account, or device, and we use it only to confirm that a request comes from the app. It is not used for advertising or tracking. Your reading history, answers, and settings are not sent with it.</p>
-<p>Like any internet request, the request reaches our server from your IP address, and our hosting provider may keep it in standard server logs for a short time. We do not use it to identify you.</p>
+<p>The first time the app loads Candle questions, it creates an anonymous Firebase Authentication account. Firebase gives that account a random ID. The app keeps the ID on your device and sends an authentication token with Candle requests. The ID lets Firebase recognize the same anonymous account across requests. The app does not add your name, email, or Apple account to it. We use it to control access to Candle questions, not for advertising or tracking. Your saved reading position, answers, and settings are not sent with it.</p>
+<p>Firebase Authentication also processes your IP address and user-agent string to secure sign-in and prevent abuse. Firebase says it keeps logged IP addresses for a few weeks. Cloud Functions uses your IP address to handle Candle requests and keeps it temporarily. We do not use this data for advertising or tracking.</p>
 <p>Questions are written by AI from the King James text and can contain mistakes.</p>
 <h2>Sharing verses</h2>
 <p>When you share a verse, the app opens the standard iOS share sheet. The app you choose to share with (for example, Messages or Mail) receives the verse text, under that app's own privacy terms. We do not receive a copy.</p>
 <h2>Third parties</h2>
-<p>The app contains no third-party analytics, advertising, or tracking tools. Apart from the requests described above, it does not send data over the internet.</p>
+<p>The app contains no third-party analytics, advertising, or tracking tools. The AI service receives the Bible chapter text needed to write shared questions, not your anonymous account ID or IP address. Apart from the requests described above, the app does not send data over the internet.</p>
 <h2>Children</h2>
 <p>The app does not ask children for personal details. Candle questions use the same anonymous identifier process for all readers, as described above.</p>
 <h2>Scripture text</h2>
